@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.pacientes.programadecaixacomspring.controller.MainController"
+            alignment="CENTER" minHeight="500" minWidth="300" spacing="30">
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <HBox>
+        <Label>Supermercado Preço Bom</Label>
+
+        <!--        <Button fx:id="btn_minimizar">_</Button>-->
+        <!--        <Button fx:id="btn_fechar" onMouseClicked="#OnButtonFecharClick">X</Button>-->
+    </HBox>
+
+    <Separator />
+
+
+    <ImageView fitHeight="236.0" fitWidth="236.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="logo.png"/>
+    </ImageView>
+
+    <Label>Versão: 1.0.0</Label>
+
+    <VBox spacing="20" alignment="CENTER">
+        <Button fx:id="brn_caixa" minWidth="170" onMouseClicked="#OnButtonCaixaClick">Caixa</Button>
+
+        <Button fx:id="btn_preco" minWidth="170" onMouseClicked="#OnButtonPrecoClick">Verificador de Preço</Button>
+
+        <Button fx:id="btn_cadastro" minWidth="170" onMouseClicked="#OnButtonCadastroClick">Cadastrar Produto</Button>
+
+        <Button fx:id="btn_sobre" minWidth="170" onMouseClicked="#OnButtonSobreClick">Sobre o Sistema</Button>
+
+        <Button fx:id="btn_sair" minWidth="170" onMouseClicked="#OnButtonSairClick">Sair</Button>
+    </VBox>
+
+</VBox>

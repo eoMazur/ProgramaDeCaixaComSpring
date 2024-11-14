@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.pacientes.programadecaixacomspring.controller.CaixaController"
+            prefHeight="400.0" prefWidth="600.0" spacing="10">
+
+
+    <Label>Caixa de Supermecado</Label>
+
+    <Separator />
+
+    <HBox spacing="40">
+        <Label>
+            <HBox.margin>
+                <Insets left="80.0" />
+            </HBox.margin>Código:</Label>
+        <Label>
+            <HBox.margin>
+                <Insets left="80.0" />
+            </HBox.margin>Quantidade:</Label>
+    </HBox>
+
+    <HBox spacing="30">
+        <HBox spacing="30" />
+        <TextField fx:id="tf_codigo" onKeyTyped="#OnKeyTypedCodigo" />
+        <TextField fx:id="tf_quantidade" />
+    </HBox>
+
+
+
+    <Label fx:id="lbl_produto" />
+
+    <Button fx:id="btn_adicionarLista">Adicionar à lista</Button>
+
+
+    <Label>Lista de produtos:</Label>
+
+
+    <Label fx:id="lbl_lista" />
+
+    <ListView fx:id="listProdutos" maxWidth="Infinity" maxHeight="100"></ListView>
+</VBox>
