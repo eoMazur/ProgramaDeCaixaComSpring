@@ -3,7 +3,7 @@ package com.pacientes.programadecaixacomspring.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.ArrayList;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -18,8 +18,7 @@ public class Carrinho {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany
-    private List<Produto> idProdutos;
+    private LocalDateTime dataCompra;
 
 
 }

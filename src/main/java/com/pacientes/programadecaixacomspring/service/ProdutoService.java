@@ -5,6 +5,8 @@ import com.pacientes.programadecaixacomspring.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class ProdutoService {
 
@@ -15,12 +17,9 @@ public class ProdutoService {
         return repository.save(produto);
     }
 
-    public String buscarPeloId(Long id){
-        if (!repository.existsById(id)){
-            return "produto não existe";
-        }
+    public Optional<Produto> buscarPeloId(Long id){
 
-        return repository.findById(id).get().getNome();
+        return repository.findById(id);
     }
 
 }

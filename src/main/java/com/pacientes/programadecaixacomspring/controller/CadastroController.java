@@ -7,10 +7,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
-@Component
+@Controller
 public class CadastroController {
 
     @FXML
@@ -24,10 +23,10 @@ public class CadastroController {
 
     private final ProdutoService produtoService;
 
+    @Autowired
     public CadastroController(ProdutoService produtoService) {
         this.produtoService = produtoService;
     }
-
 
     public void OnButtonCadastrarClick(MouseEvent mouseEvent) {
         String nome = tf_nome.getCharacters().toString();

@@ -38,13 +38,21 @@
 
     <Label fx:id="lbl_produto" />
 
-    <Button fx:id="btn_adicionarLista">Adicionar à lista</Button>
+    <Button onMouseClicked="#OnButtonAdicionarClick">Adicionar à lista</Button>
 
 
     <Label>Lista de produtos:</Label>
 
 
-    <Label fx:id="lbl_lista" />
+    <Label fx:id="lbl_lista" > Carrinho: </Label>
 
-    <ListView fx:id="listProdutos" maxWidth="Infinity" maxHeight="100"></ListView>
+    <ListView fx:id="listProdutos" maxWidth="Infinity" maxHeight="100"/>
+
+    <Label fx:id="lbl_precoTotal"/>
+
+    <HBox>
+        <TextField fx:id="tf_valorPago"/>
+        <Label fx:id="lbl_troco"/>
+        <Button onMouseClicked="#OnButtonPagarClick">Pagar</Button>
+    </HBox>
 </VBox>
