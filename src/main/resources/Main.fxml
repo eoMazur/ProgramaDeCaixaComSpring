@@ -18,12 +18,7 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <HBox>
-        <Label>Supermercado Preço Bom</Label>
-
-        <!--        <Button fx:id="btn_minimizar">_</Button>-->
-        <!--        <Button fx:id="btn_fechar" onMouseClicked="#OnButtonFecharClick">X</Button>-->
-    </HBox>
+    <Label style="-fx-font-size: 16px; -fx-font-weight: bold;">Supermercado Preço Bom</Label>
 
     <Separator />
 
@@ -35,17 +30,17 @@
     <Label>Versão: 1.0.0</Label>
 
     <VBox spacing="20" alignment="CENTER">
-        <Button fx:id="brn_caixa" minWidth="170" onMouseClicked="#OnButtonCaixaClick">Caixa</Button>
+        <Button minWidth="170" onMouseClicked="#OnButtonCaixaClick">Caixa</Button>
 
-        <Button fx:id="btn_preco" minWidth="170" onMouseClicked="#OnButtonPrecoClick">Verificador de Preço</Button>
+        <Button minWidth="170" onMouseClicked="#OnButtonPrecoClick">Verificador de Preço</Button>
 
-        <Button fx:id="btn_cadastro" minWidth="170" onMouseClicked="#OnButtonCadastroClick">Cadastrar Produto</Button>
+        <Button minWidth="170" onMouseClicked="#OnButtonCadastroClick">Cadastrar Produto</Button>
 
-        <Button fx:id="btn_registros" minWidth="170" onMouseClicked="#OnButtonRegistrosClick">Registros de compra</Button>
+        <Button minWidth="170" onMouseClicked="#OnButtonRegistrosClick">Registros de compra</Button>
 
-        <Button fx:id="btn_sobre" minWidth="170" onMouseClicked="#OnButtonSobreClick">Sobre o Sistema</Button>
+        <Button minWidth="170" onMouseClicked="#OnButtonSobreClick">Sobre o Sistema</Button>
 
-        <Button fx:id="btn_sair" minWidth="170" onMouseClicked="#OnButtonSairClick">Sair</Button>
+        <Button minWidth="170" onMouseClicked="#OnButtonSairClick">Sair</Button>
     </VBox>
 
 </VBox>

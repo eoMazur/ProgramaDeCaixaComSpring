@@ -25,6 +25,9 @@ public class VerificadorPrecoController {
     @FXML
     public Label lbl_descricao;
 
+    @FXML
+    public Label lbl_aviso;
+
     @Autowired
     public VerificadorPrecoController(ProdutoService service) {
         this.service = service;
@@ -32,18 +35,28 @@ public class VerificadorPrecoController {
 
 
     public void OnButtonBuscarClick(MouseEvent mouseEvent) {
-        Long id = Long.valueOf(tf_codigo.getCharacters().toString());
-        if (id < 0){
 
+        if(tf_codigo.getCharacters().isEmpty()){
+            lbl_aviso.setText("Preencha o campo código!");
         }
         else {
-            Optional<Produto> produto = service.buscarPeloId(id);
+            Long id = Long.valueOf(tf_codigo.getCharacters().toString());
 
-            lbl_descricao.setText(produto.get().getNome());
+            if (id <= 0){
+                lbl_aviso.setText("Id Invalido!");
+            }
+            else {
+                Optional<Produto> produto = service.buscarPeloId(id);
 
-            lbl_preco.setText("R$" + produto.get().getPreco());
+                if(produto.isEmpty()){
+                    lbl_aviso.setText("Produto não encontrado!");
+                }
+                else {
+                    lbl_descricao.setText(produto.get().getNome());
 
-
+                    lbl_preco.setText("R$" + produto.get().getPreco());
+                }
+            }
         }
     }
 }

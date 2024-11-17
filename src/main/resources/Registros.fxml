@@ -6,13 +6,22 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.geometry.Insets?>
 <VBox xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.pacientes.programadecaixacomspring.controller.RegistrosController"
-            prefHeight="350.0" prefWidth="500.0" alignment="CENTER" spacing="60">
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.pacientes.programadecaixacomspring.controller.RegistrosController"
+      prefHeight="350.0" prefWidth="500.0" alignment="CENTER" spacing="60">
 
-    <Button onMouseClicked="#OnButtonBuscarClick">Buscar</Button>
+    <Button onMouseClicked="#OnButtonBuscarClick">Buscar
+        <VBox.margin>
+            <Insets top="25"/>
+        </VBox.margin>
+    </Button>
 
-    <ListView fx:id="list_carrinhos" minHeight="100" />
+    <VBox alignment="CENTER" spacing="20">
+        <Label fx:id="lbl_aviso" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <ListView fx:id="list_carrinhos" minHeight="100" />
+    </VBox>
 
 </VBox>

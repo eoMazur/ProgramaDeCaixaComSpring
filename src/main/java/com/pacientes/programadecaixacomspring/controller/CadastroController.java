@@ -29,12 +29,18 @@ public class CadastroController {
     }
 
     public void OnButtonCadastrarClick(MouseEvent mouseEvent) {
-        String nome = tf_nome.getCharacters().toString();
 
-        Double preco = Double.valueOf(tf_preco.getCharacters().toString());
+        if (tf_nome.getCharacters().toString().isEmpty() || tf_preco.getCharacters().toString().isEmpty()){
+            lbl_produto.setText("Preencha os campos!");
+        }
+        else{
+            String nome = tf_nome.getCharacters().toString();
 
-        Produto produto = produtoService.cadastrarProduto(new Produto(null, nome, preco));
+            Double preco = Double.valueOf(tf_preco.getCharacters().toString());
 
-        lbl_produto.setText(produto.toString());
+            Produto produto = produtoService.cadastrarProduto(new Produto(null, nome, preco));
+
+            lbl_produto.setText(produto.toString());
+        }
     }
 }

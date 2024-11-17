@@ -20,31 +20,31 @@
 
     <Separator/>
 
-
+    <Label fx:id="lbl_aviso" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
 
     <VBox alignment="CENTER" spacing="30">
         <VBox>
-            <Label>Descrição
+            <Label style="-fx-font-size: 20px;">Descrição
                 <VBox.margin>
                     <Insets left="30.0"/>
                 </VBox.margin>
             </Label>
-            <Label fx:id="lbl_descricao" style="-fx-font-size: 32px; -fx-font-weight: bold;">
+            <Label fx:id="lbl_descricao" style="-fx-font-size: 28px; -fx-font-weight: bold;">
                 <VBox.margin>
-                    <Insets left="38.0"/>
+                    <Insets left="42.0"/>
                 </VBox.margin>
             </Label>
         </VBox>
 
         <VBox>
-            <Label>Preço:
+            <Label style="-fx-font-size: 20px;">Preço:
                 <VBox.margin>
                     <Insets left="30.0"></Insets>
                 </VBox.margin>
             </Label>
-            <Label fx:id="lbl_preco" style="-fx-font-size: 32px; -fx-font-weight: bold;">
+            <Label fx:id="lbl_preco" style="-fx-font-size: 28px; -fx-font-weight: bold;">
                 <VBox.margin>
-                    <Insets left="38.0"/>
+                    <Insets left="42.0"/>
                 </VBox.margin>
             </Label>
         </VBox>
