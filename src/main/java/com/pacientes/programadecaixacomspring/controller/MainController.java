@@ -19,22 +19,29 @@ public class MainController {
 
 
     public void OnButtonCaixaClick(MouseEvent mouseEvent) throws IOException {
-        abrirInterface.abrirNovaInterface("/Caixa.fxml", "Tela de Caixa");
+        abrirInterface.abrirNovaInterface("/Caixa.fxml", "Caixa");
     }
 
     public void OnButtonPrecoClick(MouseEvent mouseEvent) {
+        abrirInterface.abrirNovaInterface("/VerificadorPreco.fxml", "Verificador de Preço");
     }
 
     public void OnButtonCadastroClick(MouseEvent mouseEvent) throws IOException {
-        abrirInterface.abrirNovaInterface("/Cadastro.fxml", "Tela de Cadastro");
+        abrirInterface.abrirNovaInterface("/Cadastro.fxml", "Cadastro de Produtos");
+    }
+
+    public void OnButtonRegistrosClick(MouseEvent mouseEvent) {
+        abrirInterface.abrirNovaInterface("/Registros.fxml", "Registros de Compras");
     }
 
     public void OnButtonSobreClick(MouseEvent mouseEvent) {
+        abrirInterface.abrirNovaInterface("/Sobre.fxml", "Sobre");
     }
 
     public void OnButtonSairClick(MouseEvent mouseEvent) {
         System.exit(0);
     }
+
 
 
 }

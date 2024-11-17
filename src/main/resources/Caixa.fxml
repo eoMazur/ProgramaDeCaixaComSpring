@@ -10,49 +10,57 @@
 <VBox xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.pacientes.programadecaixacomspring.controller.CaixaController"
-            prefHeight="400.0" prefWidth="600.0" spacing="10">
+            prefHeight="500.0" prefWidth="600.0" spacing="10">
 
 
-    <Label>Caixa de Supermecado</Label>
+    <VBox spacing="30">
+        <HBox spacing="40">
+            <Label style="-fx-font-size: 16px;">
+                <HBox.margin>
+                    <Insets left="72.0" />
+                </HBox.margin >Código:</Label>
+            <Label style="-fx-font-size: 16px;">
+                <HBox.margin>
+                    <Insets left="72.0" />
+                </HBox.margin>Quantidade:</Label>
+        </HBox>
 
-    <Separator />
+        <HBox spacing="30">
+            <HBox spacing="30" />
+            <TextField fx:id="tf_codigo" onKeyTyped="#OnKeyTypedCodigo" />
+            <TextField fx:id="tf_quantidade" />
+        </HBox>
 
-    <HBox spacing="40">
-        <Label>
-            <HBox.margin>
-                <Insets left="80.0" />
-            </HBox.margin>Código:</Label>
-        <Label>
-            <HBox.margin>
-                <Insets left="80.0" />
-            </HBox.margin>Quantidade:</Label>
-    </HBox>
-
-    <HBox spacing="30">
-        <HBox spacing="30" />
-        <TextField fx:id="tf_codigo" onKeyTyped="#OnKeyTypedCodigo" />
-        <TextField fx:id="tf_quantidade" />
-    </HBox>
-
-
-
-    <Label fx:id="lbl_produto" />
-
-    <Button onMouseClicked="#OnButtonAdicionarClick">Adicionar à lista</Button>
-
-
-    <Label>Lista de produtos:</Label>
+        <HBox>
+            <Label fx:id="lbl_produto" style="-fx-font-size: 20px; -fx-font-weight: bold;">
+                <HBox.margin>
+                    <Insets left="72.0"/>
+                </HBox.margin>
+            </Label>
+        </HBox>
 
 
-    <Label fx:id="lbl_lista" > Carrinho: </Label>
+        <HBox>
+            <Button onMouseClicked="#OnButtonAdicionarClick">Adicionar à lista
+                <HBox.margin>
+                    <Insets left="72.0"/>
+                </HBox.margin>
+            </Button>
+        </HBox>
+
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;"> Carrinho: </Label>
+    </VBox>
 
     <ListView fx:id="listProdutos" maxWidth="Infinity" maxHeight="100"/>
 
-    <Label fx:id="lbl_precoTotal"/>
+    <Label fx:id="lbl_precoTotal" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
 
-    <HBox>
+    <HBox spacing="10" alignment="CENTER">
         <TextField fx:id="tf_valorPago"/>
-        <Label fx:id="lbl_troco"/>
         <Button onMouseClicked="#OnButtonPagarClick">Pagar</Button>
     </HBox>
+
+    <VBox alignment="CENTER">
+        <Label fx:id="lbl_troco" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+    </VBox>
 </VBox>

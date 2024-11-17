@@ -5,6 +5,8 @@ import com.pacientes.programadecaixacomspring.repository.CarrinhoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CarrinhoService {
 
@@ -18,5 +20,9 @@ public class CarrinhoService {
 
     public Carrinho abrirCarrinho(Carrinho carrinho){
         return repository.save(carrinho);
+    }
+
+    public List<Carrinho> buscarTodos() {
+        return repository.findAll();
     }
 }

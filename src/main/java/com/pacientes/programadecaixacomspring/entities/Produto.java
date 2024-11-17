@@ -12,7 +12,7 @@ import lombok.*;
 @NoArgsConstructor
 @Getter
 @Setter
-@ToString
+
 public class Produto {
 
     @Id
@@ -22,4 +22,9 @@ public class Produto {
     private String nome;
 
     private Double preco;
+
+    @Override
+    public String toString(){
+        return "Id: " + id + " | Nome: " + nome + " | Preço: R$" + preco;
+    }
 }

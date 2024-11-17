@@ -9,23 +9,25 @@
 <VBox xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.pacientes.programadecaixacomspring.controller.CadastroController"
-            prefHeight="400.0" prefWidth="600.0" alignment="CENTER" spacing="10">
+            prefHeight="400.0" prefWidth="600.0" alignment="CENTER" spacing="60">
 
 
-    <HBox alignment="CENTER" spacing="150">
-        <Label>Nome</Label>
-        <Label>Preço</Label>
-    </HBox>
+    <VBox alignment="CENTER" spacing="20">
+        <HBox alignment="CENTER" spacing="150">
+            <Label>Nome</Label>
+            <Label>Preço</Label>
+        </HBox>
 
-    <HBox alignment="CENTER" spacing="30">
-        <TextField fx:id="tf_nome"/>
-        <TextField fx:id="tf_preco"/>
-    </HBox>
+        <HBox alignment="CENTER" spacing="30">
+            <TextField fx:id="tf_nome"/>
+            <TextField fx:id="tf_preco"/>
+        </HBox>
+
+        <Button onMouseClicked="#OnButtonCadastrarClick">Cadastrar</Button>
+    </VBox>
 
 
-    <Button fx:id="btn_cadastar" onMouseClicked="#OnButtonCadastrarClick">Cadastrar</Button>
-
-    <Label fx:id="lbl_produto"/>
+    <Label fx:id="lbl_produto" style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
 
 
 

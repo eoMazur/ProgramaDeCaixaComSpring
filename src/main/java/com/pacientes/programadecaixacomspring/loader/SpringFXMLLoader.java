@@ -18,7 +18,7 @@ public class SpringFXMLLoader {
 
     public FXMLLoader load(String fxmlPath) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setControllerFactory(context::getBean); // Configura o Spring para fornecer o controlador
+        loader.setControllerFactory(context::getBean);
         try (InputStream fxmlStream = getClass().getResourceAsStream(fxmlPath)) {
             loader.load(fxmlStream);
         }

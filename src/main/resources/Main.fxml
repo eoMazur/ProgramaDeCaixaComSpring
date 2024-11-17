@@ -41,6 +41,8 @@
 
         <Button fx:id="btn_cadastro" minWidth="170" onMouseClicked="#OnButtonCadastroClick">Cadastrar Produto</Button>
 
+        <Button fx:id="btn_registros" minWidth="170" onMouseClicked="#OnButtonRegistrosClick">Registros de compra</Button>
+
         <Button fx:id="btn_sobre" minWidth="170" onMouseClicked="#OnButtonSobreClick">Sobre o Sistema</Button>
 
         <Button fx:id="btn_sair" minWidth="170" onMouseClicked="#OnButtonSairClick">Sair</Button>

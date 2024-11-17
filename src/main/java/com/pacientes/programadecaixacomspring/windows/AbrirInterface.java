@@ -24,6 +24,7 @@ public class AbrirInterface {
             Parent root = loader.getRoot();
 
             Stage stage = new Stage();
+            stage.setResizable(false);
             stage.setTitle(titulo);
             stage.setScene(new Scene(root));
             stage.show();

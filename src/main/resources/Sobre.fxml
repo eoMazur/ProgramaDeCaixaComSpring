@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.pacientes.programadecaixacomspring.controller.SobreController"
+      prefHeight="400.0" prefWidth="300.0" spacing="30" alignment="CENTER">
+
+    <ImageView fitHeight="118.0" fitWidth="118.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="logo.png"/>
+    </ImageView>
+
+    <Label>Versão 1.0.0</Label>
+
+    <VBox alignment="CENTER">
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;">Desenvolverdor:</Label>
+        <Label>Murilo Mazur</Label>
+    </VBox>
+
+    <VBox alignment="CENTER">
+        <Label style="-fx-font-size: 20px; -fx-font-weight: bold;">E-mail de contato:</Label>
+        <Label>tads.murilomazur@gmail.com</Label>
+    </VBox>
+
+
+</VBox>

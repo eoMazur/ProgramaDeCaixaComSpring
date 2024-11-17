@@ -74,7 +74,7 @@ public class CaixaController {
                 lbl_produto.setText("O produto não existe!");
             }
             else{
-                lbl_produto.setText(produto.get().getNome());
+                lbl_produto.setText("Produto: " + produto.get().getNome() + " | Preço: R$" + produto.get().getPreco());
             }
         }
     }
@@ -105,25 +105,30 @@ public class CaixaController {
             precoTotal += e.getProduto().getPreco() * e.getQuantidade();
         }
 
-        lbl_precoTotal.setText("Preço total: " + precoTotal);
+        lbl_precoTotal.setText("Preço total: R$" + precoTotal);
     }
 
     public void OnButtonPagarClick(MouseEvent mouseEvent) {
+
         Double valorPago = Double.valueOf(tf_valorPago.getCharacters().toString());
 
-        valorPago = valorPago - precoTotal;
-
-
-        if(valorPago < 0){
-            lbl_troco.setText("Está faltando: R$" + valorPago);
+        if(tf_valorPago.getCharacters().isEmpty()){
+            lbl_troco.setText("Informe o valor pago!");
         }
         else{
-            lbl_troco.setText("Troco: " + valorPago);
 
-            carrinhoService.abrirCarrinho(carrinho);
-            listaCarrinhoProdutos.stream().map(carrinhoProdutoService::registrarCompra);
+            valorPago = valorPago - precoTotal;
+
+
+            if(valorPago < 0){
+                lbl_troco.setText("Está faltando: R$" + valorPago);
+            }
+            else{
+                lbl_troco.setText("Troco: " + valorPago);
+
+                carrinhoService.abrirCarrinho(carrinho);
+                listaCarrinhoProdutos.stream().map(carrinhoProdutoService::registrarCompra);
+            }
         }
-
-
     }
 }
