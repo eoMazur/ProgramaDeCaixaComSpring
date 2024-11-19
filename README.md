@@ -39,7 +39,7 @@ Para executar o projeto com JavaFX, você precisa configurar as opções de VM n
 
 1. Vá até **Run > Edit Configurations**.
 2. Selecione a configuração de execução da classe principal (ProgramaDeCaixaComSpring).
-3. No campo **VM options**, adicione o seguinte comando (substituindo `<CAMINHO_ABSOLUTO_PARA_JAVAFX-SDK/LIB>` pelo caminho real da pasta):
+3. No campo **VM options**, adicione o seguinte comando (substituindo `<CAMINHO_RELATIVO_PARA_JAVAFX-SDK/LIB>` pelo caminho real da pasta):
    ```bash
    --module-path <CAMINHO_ABSOLUTO_PARA_JAVAFX-SDK/LIB> --add-modules javafx.controls,javafx.fxml
    ```
